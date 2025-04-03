@@ -12,7 +12,10 @@ export const app = express();
 app.use(express.json())
 app.use(cookieParser());
 app.use(cors({
-  origin: "https://e-shop-stripe-google-client-7heo.vercel.app",
+  origin: [
+    "https://e-shop-stripe-google-client-7heo.vercel.app",
+    "http://localhost:5173"
+  ],
   credentials: true,
 }));
 
